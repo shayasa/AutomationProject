@@ -19,11 +19,11 @@ public class Task02 {
         WebElement userName = driver.findElement(By.id("input-14"));
         userName.sendKeys(DocuportConstants.USERNAME_CLIENT);
         WebElement password = driver.findElement(By.id("input-15"));
-        password.sendKeys(DocuportConstants.Password);
+        password.sendKeys(DocuportConstants.PLACEHOLDER_FOR_PASSWORD);
         Thread.sleep(3000);
         WebElement loginBtn = driver.findElement(By.cssSelector("span[class='v-btn__content']"));
         loginBtn.click();
-        System.out.println(driver.getCurrentUrl().equals(DocuportConstants.HOME_PAGE_URL) ? " TEST1 PASSED" : "TEST1 FAILED") ;
+        System.out.println(driver.getCurrentUrl().equals("https://beta.docuport.app/") ? " TEST1 PASSED" : "TEST1 FAILED") ;
         Thread.sleep(3000);
         WebElement continueBTtn = driver.findElement(By.cssSelector("button[type='submit']"));
         continueBTtn.click();
@@ -35,7 +35,7 @@ public class Task02 {
         WebElement logOUT = driver.findElement(By.xpath("(//span[@class='body-2'])[5]"));
         logOUT.click();
         Thread.sleep(3000);
-        System.out.println(driver.getCurrentUrl().equals(DocuportConstants.LOGIN_PAGE_URL) ? " TEST2 PASSED" : "TEST 2 FAILED");
+        System.out.println(driver.getCurrentUrl().equals("https://beta.docuport.app/login") ? " TEST2 PASSED" : "TEST 2 FAILED");
         driver.close();
     }
 }

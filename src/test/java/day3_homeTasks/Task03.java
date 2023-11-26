@@ -24,11 +24,11 @@ public class Task03 {
 
         WebElement userName = driver.findElement(By.cssSelector("label[for='input-14']"));
         String userNamePlaceHolder = userName.getText();
-        System.out.println(userNamePlaceHolder.equals(DocuportConstants.USERNAME_PLACEHOLDER) ?
+        System.out.println(userNamePlaceHolder.equals(DocuportConstants.PLACEHOLDER_FOR_USERNAME) ?
                 "TEST PASSED" : "TEST FAILED");
         WebElement password = driver.findElement(By.cssSelector("label[for='input-15']"));
         String passwordPlaceHolder = password.getText();
-        System.out.println(passwordPlaceHolder.equals(DocuportConstants.PASSWORD_PLACEHOLDER) ? " TEST PASSED" : "TEST FAILED");
+        System.out.println(passwordPlaceHolder.equals(DocuportConstants.PLACEHOLDER_FOR_PASSWORD) ? " TEST PASSED" : "TEST FAILED");
 
         WebElement loginBtn = driver.findElement(By.cssSelector("span[class='v-btn__content']"));
         loginBtn.click();
@@ -36,7 +36,7 @@ public class Task03 {
         ArrayList<WebElement> errorMessages = (ArrayList<WebElement>) driver.findElement(By.cssSelector("div[class='v-messages__message']"));
        // String userNameErr= errorMessages.get(0).getText();
 
-        System.out.println(errorMessages.get(0).getText().equals(DocuportConstants.ERROR_MESSAGE_FOR_EMPTY_USERNAME) ? "TEST PASSED":
+        System.out.println(errorMessages.get(0).getText().equals(DocuportConstants.ERROR_MESSAGE_FOR_MISSING_USERNAME) ? "TEST PASSED":
                 "TEST FAILED GO HOME THAT'S IT FOR TODAY");
         //String passwordErr = errorMessages.get(1).getText();
         System.out.println(errorMessages.get(1).getText().equals(DocuportConstants.ERROR_MESSAGE_FOR_EMPTY_PASSWORD)? "TEST PASSED" : "TEST FAILED");

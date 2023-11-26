@@ -1,6 +1,9 @@
 package day4_xpath_findelement;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import utilities.WebDriverFactory;
 
 public class T0_forget_password {
     /*
@@ -10,7 +13,16 @@ public class T0_forget_password {
 
     public static void main(String[] args) {
 
-        WebDriver driver = WebDriverFactory.getDriver("chrome");
 
+        WebDriver driver = WebDriverFactory.getDriver("chrome");
+        driver.manage().window().maximize();
+        driver.get("https://beta.docuport.app");
+
+        // forget password link
+        WebElement forgetPasswordLink = driver.findElement(By.cssSelector("a[href='/reset-password']"));
+        forgetPasswordLink.click();
+
+        WebElement forgetPasswordHeading = driver.findElement(By.cssSelector("div[class='login-layout__form']>h1"));
+        System.out.println("forgetPasswordHeading = " + forgetPasswordHeading.getText());
     }
 }
