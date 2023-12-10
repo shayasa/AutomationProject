@@ -1,9 +1,10 @@
 package day05_radioButton;
 
-import com.loop.utilities.WebDriverFactory;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import utilities.WebDriverFactory;
 
 import java.time.Duration;
 
