@@ -1,0 +1,16 @@
+
+task1
+=============
+    1. go to https://loopcamp.vercel.app/nested-frames.html
+    2. validate "LEFT", "MIDDLE", "RIGHT", "BOTTOM"
+
+
+
+task2
+=============
+    1. go to https://loopcamp.vercel.app/
+    2. click "Multiple Windows" link
+    3. Validate "Powered by Loopcamp" is displayed
+    4. Validate title is "Windows"
+    5. Click - click here
+    6. Switch to new window and validate title

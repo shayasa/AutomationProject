@@ -74,7 +74,7 @@ public class T1_alerts extends TestBase {
     @Test
     public void promptAlert() throws InterruptedException {
         driver.get("https://loopcamp.vercel.app/javascript-alerts.html");
-        WebElement clickJSPrompt = driver.findElement(By.xpath("//button[contains(text(),'Click for JS Prompt')]"));
+        WebElement clickJSPrompt = driver.findElement(By.xpath("//button[(text()='Click for JS Alert')]"));
 
         clickJSPrompt.click();
         String text = "Loop Academy";
